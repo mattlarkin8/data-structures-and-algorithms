@@ -47,9 +47,9 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   let total = arr.reduce((totalValue,currentValue)=>{
-    totalValue.purchasePrice += currentValue.purchasePrice;
-    return totalValue.purchasePrice;
-  });
+    totalValue += currentValue.purchasePrice;
+    return totalValue;
+  },0);
   return total;
 };
 
