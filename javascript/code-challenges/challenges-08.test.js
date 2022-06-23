@@ -106,7 +106,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let reg=/\w*[A-Z]\w*/g;
+  let reg=/\b[A-Z]\w*/g;
   return str.match(reg)||[];
 };
 
