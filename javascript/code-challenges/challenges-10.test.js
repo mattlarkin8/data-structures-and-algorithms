@@ -54,9 +54,7 @@ return: 35
 const totalSum = (matrix) => {
   let arr=[];
   for(let i=0;i<matrix.length;i++){
-    console.log('Before: '+arr);
     arr.push(matrix[i].reduce((a,b)=>a+b,0));
-    console.log('After: '+arr);
   }
   return arr.reduce((a,b)=>a+b,0);
 };
@@ -85,10 +83,16 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let hourlyTotals=[];
+  for(let i=0;i<stores[0].length;i++){
+    let hourlySum=0;
+    for(let j=0;j<stores.length;j++){
+      hourlySum+=stores[j][i];
+    }
+    hourlyTotals.push(hourlySum);
+  }
+  return hourlyTotals;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -100,7 +104,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,7 +129,16 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  
+  let treats=0;
+  arr.forEach(obj=>{
+    let listArr=obj.items;
+    listArr.forEach(item=>{
+      if(item.name==='Treats'){
+        treats=item.quantity;
+      }
+    });
+  });
+  return treats;
 };
 
 /* ------------------------------------------------------------------------------------------------
