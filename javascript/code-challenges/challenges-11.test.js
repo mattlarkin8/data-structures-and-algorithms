@@ -67,19 +67,9 @@ For example, [[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]] returns [[1024, 1048576,
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  let nums=[];
-  input.forEach(arr=>nums.push(arr.map(val=>{
-    if(typeof val==='number'){
-      val;
-    }
-  })));
-  // console.log(nums);
-  // let d5=[];
-  // nums.forEach(arr=>d5.push(arr.map(val=>val%5===0?val:null)));
-  // console.log(d5);
-  let results=[];
-  // d5.forEach(arr=>results.push(arr.map(val=>Math.pow(2,val))));
-  return results;
+  return input.map(arr=>{
+    return arr.filter(elem=>typeof elem==='number'&&elem%5===0).map(filteredElem=>Math.pow(2,filteredElem));
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
