@@ -1,6 +1,7 @@
 class LinkedList:
     """
-    Put docstring here
+    Used to create a singly linked list. Has methods to create a new node at the beginning of the list, search
+    for a value in the list, and return a string that represents all items in the list.
     """
 
     def __init__(self):
