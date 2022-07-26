@@ -13,7 +13,6 @@ class LinkedList:
         while current is not None:
             text += "{ " + str(current.value) + " } -> "
             current = current.next
-
         return text + "NULL"
 
     def insert(self, val):
@@ -41,14 +40,13 @@ class LinkedList:
             self.head = new_node
             return f"Successfully created {new}!"
 
-        while current is not None:
+        while current and current.next is not None:
             if current.next.value == idx:
                 new_node = Node(new)
                 new_node.next = current.next
                 current.next = new_node
                 return f"Successfully created {new}!"
             current = current.next
-
         raise TargetError
 
     def insert_after(self, idx, new):
@@ -63,7 +61,7 @@ class LinkedList:
                 current.next = new_node
                 return f"Successfully created {new}!"
             current = current.next
-
+        raise TargetError
 
     def includes(self, val):
         current = self.head
@@ -71,7 +69,6 @@ class LinkedList:
             if current.value == val:
                 return True
             current = current.next
-
         return False
 
 class Node:
