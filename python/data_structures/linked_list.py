@@ -71,6 +71,41 @@ class LinkedList:
             current = current.next
         return False
 
+    def get_length(self):
+        length = 0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        return length
+
+    def kth_from_end(self, k):
+        # raise error if k is under range
+        if k < 0:
+            raise TargetError
+
+        # get length of list
+        length = self.get_length()
+
+        # raise error if k is larger than list
+        if k >= length:
+            raise TargetError
+
+        # find index of target value
+        target_idx = (length - 1) - k
+        # set counter to track our index as we iterate
+        current_idx = 0
+        current = self.head
+        # iterate through list
+        while current:
+            # check if we are at the correct index for our target
+            if current_idx == target_idx:
+                # return the target value upon reaching target
+                return current.value
+            # increment our index and move to next node
+            current_idx += 1
+            current = current.next
+
 class Node:
     def __init__(self, val, next = None):
         self.value = val
