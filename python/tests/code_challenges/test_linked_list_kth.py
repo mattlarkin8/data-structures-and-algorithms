@@ -2,7 +2,6 @@ import pytest
 from data_structures.linked_list import LinkedList, TargetError
 
 
-@pytest.mark.skip("TODO")
 def test_kth_from_end_zero():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
@@ -13,7 +12,6 @@ def test_kth_from_end_zero():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_kth_from_end_one():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
@@ -24,7 +22,6 @@ def test_kth_from_end_one():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_kth_from_end_two():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
@@ -35,7 +32,6 @@ def test_kth_from_end_two():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_kth_from_end_out_of_range():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
@@ -45,7 +41,6 @@ def test_kth_from_end_out_of_range():
         linked_list.kth_from_end(3)
 
 
-@pytest.mark.skip("TODO")
 def test_kth_from_end_under_range():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
@@ -55,7 +50,6 @@ def test_kth_from_end_under_range():
         linked_list.kth_from_end(-1)
 
 
-@pytest.mark.skip("TODO")
 def test_kth_from_end_size_one():
     linked_list = LinkedList()
     linked_list.insert("apples")
