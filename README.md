@@ -28,3 +28,4 @@ To run your tests
 - [Singly Linked List](python/docs/linked_list/README.md)
 - [Linked List Insertions](python/docs/linked_list_insertions/README.md)
 - [Kth From End](python/docs/linked_list_kth/README.md)
+- [Pseudo Queue](python/docs/stack_queue_pseudo/README.md)
