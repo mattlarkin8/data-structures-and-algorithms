@@ -29,3 +29,4 @@ To run your tests
 - [Linked List Insertions](python/docs/linked_list_insertions/README.md)
 - [Kth From End](python/docs/linked_list_kth/README.md)
 - [Pseudo Queue](python/docs/stack_queue_pseudo/README.md)
+- [Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)
