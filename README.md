@@ -30,3 +30,4 @@ To run your tests
 - [Kth From End](python/docs/linked_list_kth/README.md)
 - [Pseudo Queue](python/docs/stack_queue_pseudo/README.md)
 - [Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)
+- [Bracket Validation](python/docs/stack_queue_brackets/README.md)
