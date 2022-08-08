@@ -54,6 +54,16 @@ def test_enqueue_one():
 
 
 # @pytest.mark.skip("TODO")
+def test_enqueue_one_next():
+    q = Queue()
+    q.enqueue("apples")
+    assert q.front.value == "apples"
+    assert q.rear.value == "apples"
+    assert q.front.next is None
+    assert q.rear.next is None
+
+
+# @pytest.mark.skip("TODO")
 def test_enqueue_two():
     q = Queue()
     q.enqueue("apples")
