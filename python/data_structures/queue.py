@@ -15,6 +15,8 @@ class Queue:
         if self.front is None:
             self.front = new_node
             self.rear = new_node
+            return
+
         self.rear.next = new_node
         self.rear = new_node
 
