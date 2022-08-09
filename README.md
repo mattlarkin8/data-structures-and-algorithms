@@ -33,3 +33,4 @@ To run your tests
 - [Bracket Validation](python/docs/stack_queue_brackets/README.md)
 - [Binary Tree and BST](python/docs/trees/README.md)
 - [Breadth-first Traversal](python/docs/tree_breadth_first/README.md)
+- [Tree Max](python/docs/tree_max/README.md)
