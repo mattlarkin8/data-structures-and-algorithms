@@ -12,7 +12,7 @@ Array: `[8,4,23,42,16,15]`
 
 ### Step 0
 
-There is technically a step 0, where j is not a valid number, so we do not compare or change any values. We then continue iterating through the list at Step 1.
+There is technically a step 0, where `j` is not a valid number, so we do not compare or change any values. We then continue iterating through the list at Step 1.
 
 ### Step 1
 
