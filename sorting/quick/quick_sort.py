@@ -7,25 +7,17 @@ def quick_sort(nums, left, right):
     return nums
 
 def partition(nums, left, right):
-    pi = left
     pivot = nums[right]
+    low = left - 1
 
-    while nums[pi] <= pivot:
-        pi += 1
+    for i in range(left, right):
+        if nums[i] <= pivot:
+            low += 1
+            swap(nums, i, low)
 
-    i = pi
-    while nums[i] > pivot:
-        i += 1
+    swap(nums, right, low + 1)
 
-    swap(nums, i, pi)
+    return low + 1
 
-    return pi
-
-def swap(nums, i, pi):
-    if i != pi:
-        nums[i], nums[pi] = nums[pi], nums[i]
-
-
-if __name__ == '__main__':
-    test = [5,12,7,5,5,7]
-    print(quick_sort(test, 0, 5))
+def swap(nums, i, low):
+        nums[i], nums[low] = nums[low], nums[i]
