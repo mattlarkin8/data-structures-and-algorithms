@@ -36,3 +36,4 @@ To run your tests
 - [Tree Max](python/docs/tree_max/README.md)
 - [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
 - [Hash Table Implementation](python/docs/hashtable/README.md)
+- [Hash Table Repeat Word](python/docs/hashtable_repeated_word/README.md)
