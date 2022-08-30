@@ -8,7 +8,7 @@ def test_exists():
     assert tree_intersection
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_tree_intersection():
 
     tree_a = BinaryTree()
@@ -24,6 +24,44 @@ def test_tree_intersection():
 
     assert sorted(actual) == sorted(expected)
 
+# @pytest.mark.skip("TODO")
+def test_tree_intersection_empty_trees():
+    tree_a = BinaryTree()
+    tree_b = BinaryTree()
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = []
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_tree_intersection_no_match():
+    tree_a = BinaryTree()
+    values = [100,200,300,400,500]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = [110,220,330,440,550]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = []
+
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_tree_intersection_words():
+    tree_a = BinaryTree()
+    values = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = ["orange", "kiwi", "banana", "strawberry", "mango", "apple"]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = ["apple", "banana", "kiwi", "mango", "orange"]
+
+    assert sorted(actual) == sorted(expected)
 
 def add_values_to_empty_tree(tree, values):
     """
