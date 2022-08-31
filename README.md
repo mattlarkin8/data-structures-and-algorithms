@@ -37,3 +37,4 @@ To run your tests
 - [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
 - [Hash Table Implementation](python/docs/hashtable/README.md)
 - [Hash Table Repeat Word](python/docs/hashtable_repeated_word/README.md)
+- [Tree Intersection](python/docs/tree_intersection/README.md)
