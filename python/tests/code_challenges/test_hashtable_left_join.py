@@ -6,8 +6,59 @@ def test_exists():
     assert left_join
 
 
-@pytest.mark.skip("TODO")
-def test_example():
+# @pytest.mark.skip("TODO")
+def test_left_join_no_right_is_none():
+    left = {
+        "apple": "banana",
+        "pineapple": "coconut",
+    }
+    right = {
+        "apple": "orange",
+    }
+
+    expected = [
+        ["apple", "banana", "orange"],
+        ["pineapple", "coconut", "NONE"],
+    ]
+
+    actual = left_join(left, right)
+    assert sorted(actual) == sorted(expected)
+
+# @pytest.mark.skip("TODO")
+def test_left_join_right_is_empty():
+    left = {
+        "apple": "banana",
+        "pineapple": "coconut",
+    }
+    right = {}
+
+    expected = [
+        ["apple", "banana", "NONE"],
+        ["pineapple", "coconut", "NONE"],
+    ]
+
+    actual = left_join(left, right)
+    assert sorted(actual) == sorted(expected)
+
+# @pytest.mark.skip("TODO")
+def test_left_join_no_left_ignores_right():
+    left = {
+        "apple": "banana",
+    }
+    right = {
+        "apple": "orange",
+        "pineapple": "coconut",
+    }
+
+    expected = [
+        ["apple", "banana", "orange"],
+    ]
+
+    actual = left_join(left, right)
+    assert sorted(actual) == sorted(expected)
+
+# @pytest.mark.skip("TODO")
+def test_left_join():
     synonyms = {
         "diligent": "employed",
         "fond": "enamored",
@@ -32,5 +83,4 @@ def test_example():
     ]
 
     actual = left_join(synonyms, antonyms)
-
-    assert actual == expected
+    assert sorted(actual) == sorted(expected)

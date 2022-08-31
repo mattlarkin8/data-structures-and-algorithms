@@ -38,3 +38,4 @@ To run your tests
 - [Hash Table Implementation](python/docs/hashtable/README.md)
 - [Hash Table Repeat Word](python/docs/hashtable_repeated_word/README.md)
 - [Tree Intersection](python/docs/tree_intersection/README.md)
+- [Left Join](python/docs/hashtable_left_join/README.md)
