@@ -1,3 +1,5 @@
+from data_structures.queue import Queue
+
 class Graph:
     """
     add node
@@ -49,6 +51,25 @@ class Graph:
 
     def get_neighbors(self, vertex):
         return self.adjacency_list[vertex]
+
+    def breadth_first(self, vertex):
+        breadth = Queue()
+        nodes = []
+        visited = []
+
+        breadth.enqueue(vertex)
+        visited.append(vertex)
+
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            nodes.append(front.value)
+
+            for edge in self.get_neighbors(front):
+                if edge.vertex not in visited:
+                    visited.append(edge.vertex)
+                    breadth.enqueue(edge.vertex)
+
+        return nodes
 
 class Vertex:
     def __init__(self, value):
